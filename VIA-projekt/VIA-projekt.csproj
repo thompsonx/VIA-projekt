@@ -71,6 +71,7 @@
     <Content Include="css\jquery.bxslider.css" />
     <Content Include="css\style.css" />
     <Content Include="gallery.html" />
+    <Content Include="homepage.html" />
     <Content Include="imgs\champagne.jpg" />
     <Content Include="index.html" />
     <Content Include="js\jquery.bxslider.js" />
