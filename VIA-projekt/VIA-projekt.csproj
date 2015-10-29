@@ -72,17 +72,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="article-list.html" />
-    <Content Include="contact-form.html" />
     <Content Include="contact-us.html" />
-    <Content Include="content-slider.html" />
     <Content Include="css\jquery.bxslider.css" />
     <Content Include="css\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="css\style.css" />
     <Content Include="gallery-2014.html" />
-    <Content Include="gallery.html" />
     <Content Include="homepage.html" />
     <Content Include="imgs\articles\article1.jpg" />
     <Content Include="imgs\articles\article2.jpg" />
@@ -147,12 +143,8 @@
     <Content Include="imgs\sponsors\03bauer.jpg" />
     <Content Include="imgs\sponsors\04crs.jpg" />
     <Content Include="imgs\zavada.jpg" />
-    <Content Include="index.html" />
     <Content Include="js\jquery.bxslider.js" />
     <Content Include="js\main.js" />
-    <Content Include="layouts.html" />
-    <Content Include="menu.html" />
-    <Content Include="newsletter.html" />
     <Content Include="results.html" />
     <Content Include="Web.config" />
   </ItemGroup>
