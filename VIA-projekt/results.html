@@ -12,11 +12,14 @@
 
     <meta name="description" content="Official website of Night Firemen League. News, contests, contact." />
     <meta name="keywords" content="firemen league, night contents, firesport" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <meta name="robots" content="index, follow" />
 
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <!--<link rel="stylesheet" type="text/css" href="./css/main.css" />-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700&subset=latin-ext,latin" />
@@ -37,7 +40,7 @@
         <!-- PAGE HEADER -->
 
         <div id="page-title">
-            <h1>Night Firemen League</h1>
+            <h1><i class="fa fa-fire-extinguisher"></i>Night Firemen League</h1>
         </div>
 
         <!-- BEGIN: MAIN MENU -->
@@ -71,11 +74,12 @@
 
         <!-- END: MAIN MENU -->
         <!-- CUSTOM BUTTON WITH ICON -->
-        <div id="custom-button">
-            <a href="" class="custom-button-text">Register Team</a>
+        <div id="custom-button-wrapper">
+            <div id="custom-button">
+                <a href="" class="custom-button-text">Register A Team <i class="fa fa-sign-in"></i></a>
+            </div>
         </div>
-
-    </header>
+</header>
 
 
     <div class="main" role="main">
@@ -94,7 +98,7 @@
 
                             <h4>Men 2014</h4>
 
-                            <table>
+                            <table class="men">
                                 <thead>
                                     <tr>
                                         <th>Placings</th>
@@ -114,7 +118,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr class="first">
                                         <td>1.</td>
                                         <td>Dehylov</td>
                                         <td>13</td>
@@ -130,7 +134,7 @@
                                         <td>14</td>
                                         <td>105</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="second">
                                         <td>2.</td>
                                         <td>Kozmice</td>
                                         <td>8</td>
@@ -146,7 +150,7 @@
                                         <td>8</td>
                                         <td>101</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="third">
                                         <td>3.</td>
                                         <td>Zavada</td>
                                         <td>1</td>
@@ -177,7 +181,7 @@
 
                             <h4>Women 2014</h4>
 
-                            <table>
+                            <table class="women">
                                 <thead>
                                     <tr>
                                         <th>Placings</th>
@@ -197,9 +201,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>1.</td><td>Zavada</td><td>7</td><td>8</td><td>9</td><td>5</td><td>6</td><td>9</td><td>X</td><td>8</td><td>1</td><td>7</td><td>9</td><td>69</td></tr>
-                                    <tr><td>2.</td><td>Martinov</td><td>9</td><td>6</td><td>5</td><td>9</td><td>9</td><td>1</td><td>X</td><td>5</td><td>5</td><td>9</td><td>2</td><td>60</td></tr>
-                                    <tr><td>3.</td><td>Markvartovice</td><td>8</td><td>9</td><td>7</td><td>3</td><td>4</td><td>6</td><td>X</td><td>7</td><td>6</td><td>3</td><td>6</td><td>59</td></tr>
+                                    <tr class="first"><td>1.</td><td>Zavada</td><td>7</td><td>8</td><td>9</td><td>5</td><td>6</td><td>9</td><td>X</td><td>8</td><td>1</td><td>7</td><td>9</td><td>69</td></tr>
+                                    <tr class="second"><td>2.</td><td>Martinov</td><td>9</td><td>6</td><td>5</td><td>9</td><td>9</td><td>1</td><td>X</td><td>5</td><td>5</td><td>9</td><td>2</td><td>60</td></tr>
+                                    <tr class="third"><td>3.</td><td>Markvartovice</td><td>8</td><td>9</td><td>7</td><td>3</td><td>4</td><td>6</td><td>X</td><td>7</td><td>6</td><td>3</td><td>6</td><td>59</td></tr>
                                     <tr><td>4.</td><td>Male Hostice</td><td>1</td><td>1</td><td>6</td><td>7</td><td>8</td><td>8</td><td>X</td><td>0</td><td>9</td><td>8</td><td>8</td><td>56</td></tr>
                                     <tr><td>5.</td><td>Kozmice</td><td>1</td><td>5</td><td>1</td><td>8</td><td>7</td><td>7</td><td>X</td><td>9</td><td>1</td><td>4</td><td>7</td><td>50</td></tr>
                                     <tr><td>6.</td><td>Stepankovice</td><td>1</td><td>4</td><td>8</td><td>6</td><td>3</td><td>5</td><td>X</td><td>0</td><td>8</td><td>5</td><td>5</td><td>45</td></tr>
