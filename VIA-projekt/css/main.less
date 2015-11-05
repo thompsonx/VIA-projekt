@@ -4,6 +4,10 @@
     color: #494949;
 }
 
+#header-container, .main {
+    background: #fff;
+}
+
 a {
     color: #ff6a00;
     -moz-transition: color 0.2s linear;
@@ -173,7 +177,7 @@ table {
     }
 }
 
-header {
+#header-container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -279,6 +283,21 @@ header {
 .container-column-content {
     > h2 {
         margin-top:0;
+    }
+}
+
+.slide-text {
+    width: 100%;
+    position: relative;
+
+    h3 {
+        font-size: 110%;
+        font-family: 'Exo', sans-serif;
+        color: #fff;
+        position: absolute;
+        bottom: -4px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -485,6 +504,11 @@ footer {
 }
 
 .bx-wrapper {
+    margin-bottom:35px;
+    box-shadow:none;
+    .bx-viewport {
+        box-shadow: none;
+    }
     li {
         &::before {
             content:none;
@@ -492,21 +516,45 @@ footer {
     }
 }
 
+@media(min-width: 1920px) {
+    body {
+        background: #fff url("../imgs/bg.JPG") fixed no-repeat;
+    }
+}
+
 
 @media (min-width: 1200px) {
-    header {
+    body {
+        background: #fff url("../imgs/bg1920.jpg") fixed no-repeat;
+    }
+    
+    #header-container {
         width: 1200px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .main {
         width:1200px;
         margin-left:auto;
         margin-right:auto;
         overflow: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    footer {
+        width: 1240px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:0;
     }
     .sponsors {
         width:1200px;
         margin-left:auto;
         margin-right:auto;
+        padding-left: 20px;
+        padding-right: 20px;
         overflow: hidden;
     }
 
@@ -514,6 +562,8 @@ footer {
         width:1200px;
         margin-left:auto;
         margin-right:auto;
+        padding-left: 20px;
+        padding-right: 20px;
         overflow: hidden;
     }
 }
@@ -625,14 +675,17 @@ footer {
 }
 
 @media (max-width: 1199px) {
-    header {
+   #header-container {
         width: 100%;
         margin : 5px 5px 0 5px;
     }
 
     .main {
         width: 100%;
-        margin : 0 5px 0 5px;
+
+        > .container-columns-container {
+            margin: 20px 5px 0 5px;
+        }
     }
 
     .sponsors {
@@ -645,6 +698,14 @@ footer {
 }
 
 @media (max-width: 900px) {
+    .article-list {
+        padding-right:0;
+    }
+
+    .content-slider-module {
+        display:none;
+    }
+
     .sponsors {
         text-align:center;
             
@@ -671,6 +732,10 @@ footer {
         ul {
             padding-left:0;
             margin-top: 10px;
+
+            ul {
+                margin-top: 0;
+            }
         }
     }
 
