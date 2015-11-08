@@ -307,23 +307,15 @@ table {
     .article-list-item {
         padding: 1px 10px 10px 10px;
         margin-bottom: 30px;
-        box-shadow: 0 0 8px #ffb17a inset;
-        border-radius: 5px;
-        -moz-transition: box-shadow 0.2s linear;
-        -o-transition: box-shadow 0.2s linear;
-        -webkit-transition: box-shadow 0.2s linear;
-        transition: box-shadow 0.2s linear;
-
-        &:hover {
-            box-shadow: 0 0 8px #5bacff inset;
-        }
+        border-bottom: 2px solid #eee;
 
         .item-content {
 
             h2 {
                 font-size: 130%;
                 margin-bottom: 10px;
-                text-transform: uppercase;
+                /*text-transform: uppercase;*/
+                font-weight: 600;
 
                 a {
                     color: #ff0000;
@@ -344,6 +336,12 @@ table {
             .thumbnail {
                 float: left;
                 margin-right: 10px;
+                
+                img {
+                    border: 2px solid #eee;
+                    padding: 2px;
+                    border-radius: 100%;
+                }
             }
 
             .item-text {
@@ -369,6 +367,11 @@ table {
 
             a.more {
                 text-transform: capitalize;
+                color: #2591ff;
+
+                &:hover {
+                    text-decoration:none;
+                }
 
                 &::before {
                     content: "\f0f6";

@@ -254,20 +254,13 @@ table.women .third {
 .article-list .article-list-item {
   padding: 1px 10px 10px 10px;
   margin-bottom: 30px;
-  box-shadow: 0 0 8px #ffb17a inset;
-  border-radius: 5px;
-  -moz-transition: box-shadow 0.2s linear;
-  -o-transition: box-shadow 0.2s linear;
-  -webkit-transition: box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear;
-}
-.article-list .article-list-item:hover {
-  box-shadow: 0 0 8px #5bacff inset;
+  border-bottom: 2px solid #eee;
 }
 .article-list .article-list-item .item-content h2 {
   font-size: 130%;
   margin-bottom: 10px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
+  font-weight: 600;
 }
 .article-list .article-list-item .item-content h2 a {
   color: #ff0000;
@@ -284,6 +277,11 @@ table.women .third {
 .article-list .article-list-item .item-content .thumbnail {
   float: left;
   margin-right: 10px;
+}
+.article-list .article-list-item .item-content .thumbnail img {
+  border: 2px solid #eee;
+  padding: 2px;
+  border-radius: 100%;
 }
 .article-list .article-list-item .item-content .item-text {
   color: #777;
@@ -305,6 +303,10 @@ table.women .third {
 }
 .article-list .article-list-item .item-content a.more {
   text-transform: capitalize;
+  color: #2591ff;
+}
+.article-list .article-list-item .item-content a.more:hover {
+  text-decoration: none;
 }
 .article-list .article-list-item .item-content a.more::before {
   content: "\f0f6";
