@@ -378,6 +378,42 @@ table.women .third {
 .events .item-text a:hover {
   color: #ff6a00;
 }
+.photo-gallery figure {
+  display: inline-block;
+  margin: 5px 15px 15px 15px;
+}
+.photo-gallery figure a {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  display: block;
+  width: 250px;
+  height: 200px;
+}
+.photo-gallery img {
+  min-width: 250px;
+  height: 100%;
+  -moz-transition: transform 0.35s ease,opacity 0.35s ease;
+  -o-transition: transform 0.35s ease,opacity 0.35s ease;
+  -webkit-transition: transform 0.35s ease,opacity 0.35s ease;
+  transition: transform 0.35s ease,opacity 0.35s ease;
+}
+.photo-gallery img:hover {
+  -moz-transform: rotateZ(-3deg) scale(1.2);
+  -ms-transform: rotateZ(-3deg) scale(1.2);
+  -o-transform: rotateZ(-3deg) scale(1.2);
+  -webkit-transform: rotateZ(-3deg) scale(1.2);
+  transform: rotateZ(-3deg) scale(1.2);
+  opacity: 0.85;
+}
+.photo-gallery figcaption {
+  margin-top: 5px;
+  text-align: center;
+}
+.photo-gallery figcaption strong {
+  font-weight: 600;
+  color: #777;
+}
 footer {
   background: #494949;
   color: #fff;
@@ -551,6 +587,10 @@ footer h2 {
     width: 100%;
     margin: 5px 5px 0 5px;
   }
+  .photo-gallery-module-photos {
+    margin: 0 auto;
+    text-align: center;
+  }
   .main {
     width: 100%;
   }
@@ -568,7 +608,7 @@ footer h2 {
   .article-list {
     padding-right: 0;
   }
-  .content-slider-module {
+  .content-slider-module h3 {
     display: none;
   }
   .sponsors {
@@ -600,6 +640,9 @@ footer h2 {
   }
 }
 @media (max-width: 549px) {
+  #header-container {
+    margin: 0;
+  }
   #page-title {
     float: none;
   }
@@ -612,13 +655,12 @@ footer h2 {
     width: 100%;
   }
   #main-menu ul {
-    padding-left: 0;
+    padding: 0;
     margin-top: 0;
     list-style: none;
   }
   #main-menu ul li {
-    width: 100%;
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
     color: #494949;
     border-bottom: 2px solid #fff0e5;
   }
@@ -659,6 +701,9 @@ footer h2 {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
+  }
+  .bx-wrapper .bx-viewport {
+    border: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
