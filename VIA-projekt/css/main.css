@@ -17,10 +17,18 @@ a {
 a:hover {
   color: #2591ff;
 }
+ol {
+  list-style-type: decimal;
+}
+ol.alphabet {
+  list-style-type: lower-alpha;
+}
 input[type=text],
 input[type=email],
 input[type=password],
-textarea {
+textarea,
+select,
+option {
   border: 1px solid #dddddd;
   border-radius: 3px;
   padding: 5px;
@@ -41,7 +49,9 @@ textarea {
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
-textarea:focus {
+textarea:focus,
+select:focus,
+option:focus {
   border: 1px solid #2591ff;
   background: #e4f1ff;
 }
@@ -67,6 +77,32 @@ input[type=submit] {
 input[type=submit]:hover {
   border: 1px solid #2591ff;
   color: #2591ff;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+  display: inline-block;
+  content: " ";
+  width: 17px;
+  height: 17px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  background: url("../imgs/checkbox.png") left top no-repeat;
+  cursor: pointer;
+}
+input[type="radio"] + label:before {
+  width: 15px;
+  height: 15px;
+  background: url("../imgs/radio.png") left top no-repeat;
+}
+input[type="radio"]:checked + label:before {
+  background-position: 0 -15px;
+}
+input[type="checkbox"]:checked + label:before {
+  background-position: 0 -17px;
 }
 .main .container-column-content ul li {
   list-style: none;
@@ -452,6 +488,57 @@ footer h2 {
 }
 .bx-wrapper li::before {
   content: none;
+}
+.form-wrapper h4 {
+  margin-bottom: 10px;
+}
+.form-wrapper table {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+.form-wrapper table tr {
+  display: table;
+  width: 100%;
+}
+.form-wrapper table tr:hover {
+  background: none;
+}
+.form-wrapper table tr:nth-child(even) {
+  background: none;
+}
+.form-wrapper table tr td {
+  border: none;
+  display: table-row;
+  width: 100%;
+  text-align: left;
+}
+.form-wrapper table tr td.label-td {
+  font-size: 90%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.form-wrapper table tr td .field-validation-error {
+  font-size: 90%;
+  color: #ff6a00;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.form-wrapper table tr td input,
+.form-wrapper table tr td textarea {
+  width: 95%;
+  color: #2591ff;
+  font-size: 90%;
+  font-weight: 600;
+}
+.form-wrapper table tr td textarea {
+  min-height: 100px;
+}
+.form-wrapper table tr td input[type="submit"] {
+  width: auto;
+}
+.form-wrapper table tr.form-submit-tr td {
+  text-align: center;
 }
 @media (min-width: 1920px) {
   body {

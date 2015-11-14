@@ -20,7 +20,15 @@ a {
     }
 }
 
-input[type=text], input[type=email], input[type=password], textarea {
+ol {
+    list-style-type: decimal;
+}
+
+ol.alphabet {
+    list-style-type: lower-alpha;
+}
+
+input[type=text], input[type=email], input[type=password], textarea, select, option {
     border: 1px solid #dddddd;
     border-radius: 3px;
     padding: 5px;
@@ -67,6 +75,35 @@ input[type=submit] {
         border: 1px solid #2591ff;
         color: #2591ff;
     }
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display:none;
+}
+
+input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+    display:inline-block;
+    content: " ";
+    width:17px;
+    height:17px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url("../imgs/checkbox.png") left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"] + label:before {
+    width: 15px;
+    height: 15px;
+    background:url("../imgs/radio.png") left top no-repeat;
+}
+
+input[type="radio"]:checked + label:before {
+    background-position: 0 -15px;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-position: 0 -17px;
 }
 
 .main .container-column-content {
@@ -561,6 +598,75 @@ footer {
     li {
         &::before {
             content:none;
+        }
+    }
+}
+
+
+.form-wrapper {
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    table {
+        border: none;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+
+        tr {
+            display:table;
+            width: 100%;
+
+            &:hover {
+                background: none;
+            }
+            
+            &:nth-child(even) {
+                background: none;
+            }
+
+            td {
+                border:none;
+                display: table-row;
+                width: 100%;
+                text-align: left;
+
+                &.label-td {
+                    font-size: 90%;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                .field-validation-error {
+                    font-size: 90%;
+                    color: #ff6a00;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+
+                input, textarea {
+                    width: 95%;
+                    color: #2591ff;
+                    font-size: 90%;
+                    font-weight: 600;
+                }
+
+                textarea {
+                    min-height: 100px;
+                }
+
+                input[type="submit"] {
+                    width: auto;
+                }
+
+            }
+
+            &.form-submit-tr {
+                td {
+                    text-align:center;
+                }
+            }
         }
     }
 }
