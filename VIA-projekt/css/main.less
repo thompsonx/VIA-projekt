@@ -563,6 +563,10 @@ footer {
         color: #fff;
         margin-top:0;
     }
+
+    .sponsors-list-item {
+        vertical-align: middle;
+    }
 }
 
 .copyright {
@@ -666,6 +670,93 @@ footer {
                 td {
                     text-align:center;
                 }
+            }
+        }
+    }
+}
+
+.counter-module {
+
+    width: 100%;
+    background: #EB3C00;
+    overflow: hidden;
+    color: white;
+
+    .event-thumbnail {
+        float: left;
+        padding: 12px 20px 12px 12px ;
+    }
+
+    .event-text {
+        font-size: 90%;
+        overflow: hidden;
+        margin: 0 0 0 45px;
+
+        strong {
+            font-weight: 600;
+        }
+
+        h3 {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .date {
+            margin-right: 15px;
+            display: inline-block;
+            &::before {
+                content: "\f133";
+                font-family: FontAwesome;
+                margin-right: 5px;
+            }
+        }
+
+        .start {
+            display: inline-block;
+            &::before {
+                content: "\f017";
+                font-family: FontAwesome;
+                margin-right: 5px;
+            }
+        }
+    }
+    .countdown {
+        text-align: center;
+        overflow: hidden;
+
+        .timer {
+            font-size: 16px;
+
+            #cd-days, #cd-hours, #cd-minutes {
+                font-size: 24px;
+                margin-right: 3px;
+                margin-left: 10px;
+            }
+        }
+
+        .progress {
+            margin-top: 10px;
+
+            i {
+                color: #fff;
+            }
+
+            #cd-completed {
+                display:inline-block;
+                width: 70%;
+                height: 3px;
+                background-color: #fff;
+                vertical-align: middle;
+            }
+            #cd-missing {
+                display:inline-block;
+                width:10%;
+                height: 3px;
+                vertical-align: middle;
+                background-color: #fff;
+                opacity: 0.3;
             }
         }
     }
@@ -879,6 +970,10 @@ footer {
     .copyright {
         text-align:center;
     }
+
+    .newsletter-module {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 900px) and (min-width: 550px) {
@@ -992,6 +1087,45 @@ footer {
     .bx-wrapper {
         .bx-viewport {
             border:none;
+        }
+    }
+
+    .counter-module {
+
+        .event-thumbnail {
+            float: left;
+        }
+
+        .event-text {
+
+            h3 {
+                display: block;
+                margin-right: 15px;
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+
+            .date {
+                margin-right: 15px;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+            .start {
+                display: block;
+            }
+        }
+        .countdown {
+            clear:both;
+            margin-bottom: 10px;
+
+            .timer {
+            font-size: 14px;
+
+            #cd-days, #cd-hours, #cd-minutes {
+                font-size: 20px;
+            }
+        }
         }
     }
 }

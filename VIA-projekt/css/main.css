@@ -460,6 +460,9 @@ footer h2 {
   color: #fff;
   margin-top: 0;
 }
+footer .sponsors-list-item {
+  vertical-align: middle;
+}
 .copyright {
   background: #535353;
   padding: 10px;
@@ -539,6 +542,82 @@ footer h2 {
 }
 .form-wrapper table tr.form-submit-tr td {
   text-align: center;
+}
+.counter-module {
+  width: 100%;
+  background: #EB3C00;
+  overflow: hidden;
+  color: white;
+}
+.counter-module .event-thumbnail {
+  float: left;
+  padding: 12px 20px 12px 12px ;
+}
+.counter-module .event-text {
+  font-size: 90%;
+  overflow: hidden;
+  margin: 0 0 0 45px;
+}
+.counter-module .event-text strong {
+  font-weight: 600;
+}
+.counter-module .event-text h3 {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.counter-module .event-text .date {
+  margin-right: 15px;
+  display: inline-block;
+}
+.counter-module .event-text .date::before {
+  content: "\f133";
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+.counter-module .event-text .start {
+  display: inline-block;
+}
+.counter-module .event-text .start::before {
+  content: "\f017";
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+.counter-module .countdown {
+  text-align: center;
+  overflow: hidden;
+}
+.counter-module .countdown .timer {
+  font-size: 16px;
+}
+.counter-module .countdown .timer #cd-days,
+.counter-module .countdown .timer #cd-hours,
+.counter-module .countdown .timer #cd-minutes {
+  font-size: 24px;
+  margin-right: 3px;
+  margin-left: 10px;
+}
+.counter-module .countdown .progress {
+  margin-top: 10px;
+}
+.counter-module .countdown .progress i {
+  color: #fff;
+}
+.counter-module .countdown .progress #cd-completed {
+  display: inline-block;
+  width: 70%;
+  height: 3px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.counter-module .countdown .progress #cd-missing {
+  display: inline-block;
+  width: 10%;
+  height: 3px;
+  vertical-align: middle;
+  background-color: #fff;
+  opacity: 0.3;
 }
 @media (min-width: 1920px) {
   body {
@@ -707,6 +786,9 @@ footer h2 {
   .copyright {
     text-align: center;
   }
+  .newsletter-module {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 900px) and (min-width: 550px) {
   #page-title {
@@ -791,6 +873,35 @@ footer h2 {
   }
   .bx-wrapper .bx-viewport {
     border: none;
+  }
+  .counter-module .event-thumbnail {
+    float: left;
+  }
+  .counter-module .event-text h3 {
+    display: block;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .counter-module .event-text .date {
+    margin-right: 15px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .counter-module .event-text .start {
+    display: block;
+  }
+  .counter-module .countdown {
+    clear: both;
+    margin-bottom: 10px;
+  }
+  .counter-module .countdown .timer {
+    font-size: 14px;
+  }
+  .counter-module .countdown .timer #cd-days,
+  .counter-module .countdown .timer #cd-hours,
+  .counter-module .countdown .timer #cd-minutes {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
