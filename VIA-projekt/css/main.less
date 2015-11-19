@@ -145,6 +145,7 @@ h4 {
 }
 
 h5 {
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -167,10 +168,6 @@ table {
             text-align: center;
         }
 
-        tr:hover {
-            background: #efefef;
-        }
-
         tr:nth-child(even) {
             background-color:#efefef;
         }
@@ -188,28 +185,34 @@ table {
 
     &.men {
         .first {
-            background: #5bacff;
+            background: #002e9b;
+            color: white;
         }
 
         .second {
-            background: #89c3ff;
+            background: #0058b4;
+            color: white;
         }
 
         .third {
-            background: #b7daff;
+            background: #007afb;
+            color: white;
         }
     }
     &.women {
         .first {
-            background: #ff7979;
+            background: #bf0000;
+            color: white;
         }
 
         .second {
-            background: #ff8e8e;
+            background: #f61e00;
+            color: white;
         }
 
         .third {
-            background: #ffc5c5;
+            background: #ff3b3b;
+            color: white;
         }
     }
 }
@@ -743,19 +746,19 @@ footer {
                 color: #fff;
             }
 
-            #cd-completed {
-                display:inline-block;
-                width: 70%;
+            #cd-completed, #cd-missing {
+                display: inline-block;
                 height: 3px;
                 background-color: #fff;
                 vertical-align: middle;
+                margin-top: -2px;
+            }
+
+            #cd-completed {
+                width: 70%;
             }
             #cd-missing {
-                display:inline-block;
                 width:10%;
-                height: 3px;
-                vertical-align: middle;
-                background-color: #fff;
                 opacity: 0.3;
             }
         }
@@ -815,6 +818,17 @@ footer {
 }
 
 @media (min-width: 900px) {
+
+    iframe {
+        width: 98%;
+    }
+
+    table {
+       tr:hover {
+            background: #efefef;
+        }
+    }
+
     #articles {
         .container-column-1 {
             width: 65%;
@@ -833,7 +847,6 @@ footer {
         height:100%;
     }
     .container-columns-50p-50p {
-        width: 100%;
         overflow: hidden;
 
         &::after {
@@ -921,15 +934,25 @@ footer {
 }
 
 @media (max-width: 1199px) {
-   #header-container {
+   header {
+       margin : 5px 5px 0 5px;
+   }
+
+    #header-container {
         width: 100%;
-        margin : 5px 5px 0 5px;
     }
 
    .photo-gallery-module-photos {
        margin: 0 auto;
        text-align: center;
    }
+
+    .bx-wrapper {
+        .bx-viewport {
+            border:none;
+            left:0;
+        }
+    }
 
     .main {
         width: 100%;
@@ -949,6 +972,11 @@ footer {
 }
 
 @media (max-width: 900px) {
+
+    iframe {
+        width: 100%;
+    }
+
     .article-list {
         padding-right:0;
     }
@@ -973,6 +1001,108 @@ footer {
 
     .newsletter-module {
         margin-bottom: 20px;
+    }
+
+    table.results {
+        display:block;
+        thead, tbody, th, td, tr {
+			display: block;
+		}
+        thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+        tbody {
+            tr {
+                &.first, &.second, &.third {
+                    background-color: inherit;
+                    color: #494949;
+                }
+                &:nth-child(even) {
+                    background-color: #eee;
+                }
+            }
+        }
+
+        &.men {
+            .first {
+                td:nth-child(1) {
+                    background-color: #002e9b;
+                    color: white;
+                }
+            }
+            .second {
+                td:nth-child(1) {
+                    background-color: #0058b4;
+                    color: white
+                }
+            }
+            .third {
+                td:nth-child(1) {
+                    background-color: #007afb;
+                    color: white;
+                }
+            }
+        }
+        &.women {
+            .first {
+                td:nth-child(1) {
+                    background-color: #bf0000;
+                    color: white;
+                }
+            }
+            .second {
+                td:nth-child(1) {
+                    background-color: #f61e00;
+                    color: white;
+                }
+            }
+            .third {
+                td:nth-child(1) {
+                    background-color: #ff3b3b;
+                    color: white;
+                }
+            }
+        }
+
+        td {
+			/* Behave  like a "row" */
+			border: none;
+            border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align:left;
+
+            &::before {
+			    /* Now like a table header */
+			    position: absolute;
+			    /* Top/left values mimic padding */
+			    top: 5px;
+			    left: 6px;
+			    width: 45%;
+			    padding-right: 10px;
+			    white-space: nowrap;
+            }
+		}
+
+        td:nth-of-type(1):before { content: "Placing"; }
+		td:nth-of-type(2):before { content: "Team"; }
+		td:nth-of-type(3):before { content: "1st round"; }
+		td:nth-of-type(4):before { content: "2st round"; }
+		td:nth-of-type(5):before { content: "3st round"; }
+		td:nth-of-type(6):before { content: "4st round"; }
+		td:nth-of-type(7):before { content: "5st round"; }
+		td:nth-of-type(8):before { content: "6st round"; }
+		td:nth-of-type(9):before { content: "7st round"; }
+		td:nth-of-type(10):before { content: "8st round"; }
+        td:nth-of-type(11):before { content: "9st round"; }
+        td:nth-of-type(12):before { content: "10st round"; }
+        td:nth-of-type(13):before { content: "11st round"; }
+        td:nth-of-type(14):before { content: "Total"; }
     }
 }
 
@@ -1016,17 +1146,23 @@ footer {
     }
 
     #main-menu {
-        float:none;
-        width:100%;
+        float: none;
+        width: 100%;
+
         ul {
             padding: 0;
-            margin-top:0;
+            margin-top: 0;
             list-style: none;
 
             li {
+                margin: 0 4px;
                 padding: 8px;
                 color: #494949;
-                border-bottom: 2px solid #fff0e5;
+                border-bottom: 1px solid #fff0e5;
+                -moz-transition: background 0.6s linear;
+                -o-transition: background 0.6s linear;
+                -webkit-transition: background 0.6s linear;
+                transition: background 0.6s linear;
 
                 &.parent {
                     > a:first-of-type {
@@ -1038,23 +1174,41 @@ footer {
                     }
                 }
 
+                &:hover {
+                    background: #ff6a00;
+
+                    a {
+                        color: #fff;
+                    }
+                }
+
                 a {
                     text-decoration: none;
                     color: inherit;
 
                     &:hover {
-                        color:#ff6a00;
+                        color: #fff;
                     }
                 }
 
                 > ul {
+                    margin-top: 5px;
+
                     li {
-                        border:none;
+                        border: none;
                         font-size: 90%;
                         padding: 6px 8px 6px 8px;
 
+                        &:hover {
+                            background: #ff4e00;
+
+                            a {
+                                color: #fff;
+                            }
+                        }
+
                         a {
-                            color:#8d8d8d;
+                            color: #8d8d8d;
 
                             &::before {
                                 content: "\f105";
@@ -1063,13 +1217,12 @@ footer {
                             }
 
                             &:hover {
-                                color: #494949;
+                                color: #fff;
                             }
                         }
                     }
                 }
             }
-
         }
     }
 
@@ -1083,12 +1236,6 @@ footer {
             margin-right:auto;
         }
    }
-
-    .bx-wrapper {
-        .bx-viewport {
-            border:none;
-        }
-    }
 
     .counter-module {
 
@@ -1122,10 +1269,45 @@ footer {
             .timer {
             font-size: 14px;
 
-            #cd-days, #cd-hours, #cd-minutes {
-                font-size: 20px;
+                #cd-days, #cd-hours, #cd-minutes {
+                    font-size: 20px;
+                }
+            }   
+        }
+    }
+
+    .people-list {
+
+        .person-name {
+            span.person-job {
+                display: block;
+                margin-left: 15%;
             }
         }
+
+    }
+}
+
+@media (max-width: 350px) {
+    .article-list .article-list-item .item-content {
+
+        h2 {
+
+            &::after {
+                display: table;
+                clear: both;
+                content: " ";
+            }
+        }
+
+        .item-text {
+            text-align:justify;
+        }
+    }
+
+    .events {
+        .item-text {
+            margin-left: 15px;
         }
     }
 }

@@ -133,6 +133,7 @@ h4 {
   font-weight: normal;
 }
 h5 {
+  font-size: 14px;
   font-weight: bold;
 }
 h6 {
@@ -152,9 +153,6 @@ table tbody td {
   border: 1px solid #ddd;
   text-align: center;
 }
-table tbody tr:hover {
-  background: #efefef;
-}
 table tbody tr:nth-child(even) {
   background-color: #efefef;
 }
@@ -167,22 +165,28 @@ table thead th {
   padding: 5px;
 }
 table.men .first {
-  background: #5bacff;
+  background: #002e9b;
+  color: white;
 }
 table.men .second {
-  background: #89c3ff;
+  background: #0058b4;
+  color: white;
 }
 table.men .third {
-  background: #b7daff;
+  background: #007afb;
+  color: white;
 }
 table.women .first {
-  background: #ff7979;
+  background: #bf0000;
+  color: white;
 }
 table.women .second {
-  background: #ff8e8e;
+  background: #f61e00;
+  color: white;
 }
 table.women .third {
-  background: #ffc5c5;
+  background: #ff3b3b;
+  color: white;
 }
 #header-container {
   position: relative;
@@ -604,19 +608,19 @@ footer .sponsors-list-item {
 .counter-module .countdown .progress i {
   color: #fff;
 }
-.counter-module .countdown .progress #cd-completed {
-  display: inline-block;
-  width: 70%;
-  height: 3px;
-  background-color: #fff;
-  vertical-align: middle;
-}
+.counter-module .countdown .progress #cd-completed,
 .counter-module .countdown .progress #cd-missing {
   display: inline-block;
-  width: 10%;
   height: 3px;
-  vertical-align: middle;
   background-color: #fff;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.counter-module .countdown .progress #cd-completed {
+  width: 70%;
+}
+.counter-module .countdown .progress #cd-missing {
+  width: 10%;
   opacity: 0.3;
 }
 @media (min-width: 1920px) {
@@ -666,6 +670,12 @@ footer .sponsors-list-item {
   }
 }
 @media (min-width: 900px) {
+  iframe {
+    width: 98%;
+  }
+  table tr:hover {
+    background: #efefef;
+  }
   #articles .container-column-1 {
     width: 65%;
   }
@@ -681,7 +691,6 @@ footer .sponsors-list-item {
     height: 100%;
   }
   .container-columns-50p-50p {
-    width: 100%;
     overflow: hidden;
   }
   .container-columns-50p-50p::after {
@@ -749,13 +758,19 @@ footer .sponsors-list-item {
   }
 }
 @media (max-width: 1199px) {
+  header {
+    margin: 5px 5px 0 5px;
+  }
   #header-container {
     width: 100%;
-    margin: 5px 5px 0 5px;
   }
   .photo-gallery-module-photos {
     margin: 0 auto;
     text-align: center;
+  }
+  .bx-wrapper .bx-viewport {
+    border: none;
+    left: 0;
   }
   .main {
     width: 100%;
@@ -771,6 +786,9 @@ footer .sponsors-list-item {
   }
 }
 @media (max-width: 900px) {
+  iframe {
+    width: 100%;
+  }
   .article-list {
     padding-right: 0;
   }
@@ -788,6 +806,116 @@ footer .sponsors-list-item {
   }
   .newsletter-module {
     margin-bottom: 20px;
+  }
+  table.results {
+    display: block;
+  }
+  table.results thead,
+  table.results tbody,
+  table.results th,
+  table.results td,
+  table.results tr {
+    display: block;
+  }
+  table.results thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  table.results tbody tr.first,
+  table.results tbody tr.second,
+  table.results tbody tr.third {
+    background-color: inherit;
+    color: #494949;
+  }
+  table.results tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table.results.men .first td:nth-child(1) {
+    background-color: #002e9b;
+    color: white;
+  }
+  table.results.men .second td:nth-child(1) {
+    background-color: #0058b4;
+    color: white;
+  }
+  table.results.men .third td:nth-child(1) {
+    background-color: #007afb;
+    color: white;
+  }
+  table.results.women .first td:nth-child(1) {
+    background-color: #bf0000;
+    color: white;
+  }
+  table.results.women .second td:nth-child(1) {
+    background-color: #f61e00;
+    color: white;
+  }
+  table.results.women .third td:nth-child(1) {
+    background-color: #ff3b3b;
+    color: white;
+  }
+  table.results td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+  }
+  table.results td::before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 5px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  table.results td:nth-of-type(1):before {
+    content: "Placing";
+  }
+  table.results td:nth-of-type(2):before {
+    content: "Team";
+  }
+  table.results td:nth-of-type(3):before {
+    content: "1st round";
+  }
+  table.results td:nth-of-type(4):before {
+    content: "2st round";
+  }
+  table.results td:nth-of-type(5):before {
+    content: "3st round";
+  }
+  table.results td:nth-of-type(6):before {
+    content: "4st round";
+  }
+  table.results td:nth-of-type(7):before {
+    content: "5st round";
+  }
+  table.results td:nth-of-type(8):before {
+    content: "6st round";
+  }
+  table.results td:nth-of-type(9):before {
+    content: "7st round";
+  }
+  table.results td:nth-of-type(10):before {
+    content: "8st round";
+  }
+  table.results td:nth-of-type(11):before {
+    content: "9st round";
+  }
+  table.results td:nth-of-type(12):before {
+    content: "10st round";
+  }
+  table.results td:nth-of-type(13):before {
+    content: "11st round";
+  }
+  table.results td:nth-of-type(14):before {
+    content: "Total";
   }
 }
 @media (max-width: 900px) and (min-width: 550px) {
@@ -829,26 +957,46 @@ footer .sponsors-list-item {
     list-style: none;
   }
   #main-menu ul li {
+    margin: 0 4px;
     padding: 8px;
     color: #494949;
-    border-bottom: 2px solid #fff0e5;
+    border-bottom: 1px solid #fff0e5;
+    -moz-transition: background 0.6s linear;
+    -o-transition: background 0.6s linear;
+    -webkit-transition: background 0.6s linear;
+    transition: background 0.6s linear;
   }
   #main-menu ul li.parent > a:first-of-type::after {
     content: "\f107";
     font-family: FontAwesome;
     margin-left: 6px;
   }
+  #main-menu ul li:hover {
+    background: #ff6a00;
+  }
+  #main-menu ul li:hover a {
+    color: #fff;
+  }
   #main-menu ul li a {
     text-decoration: none;
     color: inherit;
   }
   #main-menu ul li a:hover {
-    color: #ff6a00;
+    color: #fff;
+  }
+  #main-menu ul li > ul {
+    margin-top: 5px;
   }
   #main-menu ul li > ul li {
     border: none;
     font-size: 90%;
     padding: 6px 8px 6px 8px;
+  }
+  #main-menu ul li > ul li:hover {
+    background: #ff4e00;
+  }
+  #main-menu ul li > ul li:hover a {
+    color: #fff;
   }
   #main-menu ul li > ul li a {
     color: #8d8d8d;
@@ -859,7 +1007,7 @@ footer .sponsors-list-item {
     font-family: FontAwesome;
   }
   #main-menu ul li > ul li a:hover {
-    color: #494949;
+    color: #fff;
   }
   #custom-button-wrapper {
     width: 100%;
@@ -870,9 +1018,6 @@ footer .sponsors-list-item {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-  }
-  .bx-wrapper .bx-viewport {
-    border: none;
   }
   .counter-module .event-thumbnail {
     float: left;
@@ -902,6 +1047,23 @@ footer .sponsors-list-item {
   .counter-module .countdown .timer #cd-hours,
   .counter-module .countdown .timer #cd-minutes {
     font-size: 20px;
+  }
+  .people-list .person-name span.person-job {
+    display: block;
+    margin-left: 15%;
+  }
+}
+@media (max-width: 350px) {
+  .article-list .article-list-item .item-content h2::after {
+    display: table;
+    clear: both;
+    content: " ";
+  }
+  .article-list .article-list-item .item-content .item-text {
+    text-align: justify;
+  }
+  .events .item-text {
+    margin-left: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */
