@@ -525,7 +525,8 @@ footer .sponsors-list-item {
   font-weight: 600;
   text-transform: uppercase;
 }
-.form-wrapper table tr td .field-validation-error {
+.form-wrapper table tr td .field-validation-error,
+.form-wrapper table tr td .field-validation-valid {
   font-size: 90%;
   color: #ff6a00;
   text-transform: uppercase;
@@ -546,6 +547,14 @@ footer .sponsors-list-item {
 }
 .form-wrapper table tr.form-submit-tr td {
   text-align: center;
+}
+.newsletter-module span.field-validation-valid {
+  display: none;
+  margin: 8px 0;
+  font-size: 90%;
+  color: #ff6a00;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .counter-module {
   width: 100%;

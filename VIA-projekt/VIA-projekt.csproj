@@ -143,8 +143,11 @@
     <Content Include="imgs\sponsors\03bauer.jpg" />
     <Content Include="imgs\sponsors\04crs.jpg" />
     <Content Include="imgs\zavada.jpg" />
+    <Content Include="js\contact_validation.js" />
+    <Content Include="js\countdown.js" />
     <Content Include="js\jquery.bxslider.js" />
-    <Content Include="js\main.js" />
+    <Content Include="js\newsletter_validation.js" />
+    <Content Include="js\slider.js" />
     <Content Include="results.html" />
     <Content Include="Web.config" />
   </ItemGroup>

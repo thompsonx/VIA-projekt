@@ -645,7 +645,7 @@ footer {
                     text-transform: uppercase;
                 }
 
-                .field-validation-error {
+                .field-validation-error, .field-validation-valid {
                     font-size: 90%;
                     color: #ff6a00;
                     text-transform: uppercase;
@@ -675,6 +675,17 @@ footer {
                 }
             }
         }
+    }
+}
+
+.newsletter-module {
+    span.field-validation-valid {
+        display:none;
+        margin: 8px 0;
+        font-size: 90%;
+        color: #ff6a00;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 }
 
