@@ -597,6 +597,9 @@ footer .sponsors-list-item {
   font-family: FontAwesome;
   margin-right: 5px;
 }
+.counter-module .event-text .published {
+  display: none;
+}
 .counter-module .countdown {
   text-align: center;
   overflow: hidden;
@@ -606,7 +609,8 @@ footer .sponsors-list-item {
 }
 .counter-module .countdown .timer #cd-days,
 .counter-module .countdown .timer #cd-hours,
-.counter-module .countdown .timer #cd-minutes {
+.counter-module .countdown .timer #cd-minutes,
+.counter-module .countdown .timer #cd-seconds {
   font-size: 24px;
   margin-right: 3px;
   margin-left: 10px;
@@ -625,11 +629,7 @@ footer .sponsors-list-item {
   vertical-align: middle;
   margin-top: -2px;
 }
-.counter-module .countdown .progress #cd-completed {
-  width: 70%;
-}
 .counter-module .countdown .progress #cd-missing {
-  width: 10%;
   opacity: 0.3;
 }
 @media (min-width: 1920px) {
