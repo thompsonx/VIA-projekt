@@ -606,6 +606,7 @@ footer .sponsors-list-item {
 }
 .counter-module .countdown .timer {
   font-size: 16px;
+  margin-right: 10px;
 }
 .counter-module .countdown .timer #cd-days,
 .counter-module .countdown .timer #cd-hours,
@@ -617,6 +618,7 @@ footer .sponsors-list-item {
 }
 .counter-module .countdown .progress {
   margin-top: 10px;
+  margin-bottom: 15px;
 }
 .counter-module .countdown .progress i {
   color: #fff;
